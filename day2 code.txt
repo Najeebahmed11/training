@@ -1,0 +1,41 @@
+using ConsoleApp2.Maths;
+using System;
+namespace ConsoleApp2
+{
+    public class Person
+    {
+        public string firstName;
+        public string lastName;
+        public void fullName()
+        {
+            Console.WriteLine("my full name is " + firstName + " " + lastName);
+            
+        }
+    }
+    public enum shp
+    {
+        im=0,
+        ur=1
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Person person = new Person();
+            person.firstName = "Najeeb Ahmed";
+            person.lastName = "Khan ";
+            person.fullName();
+            Calculator cal = new Calculator();
+            var result = cal.add(22, 2);
+            Console.WriteLine(result);
+            var array = new int[] { 1, 2, 3 };
+            string list = string.Join(",,,", array);
+            Console.WriteLine(list);
+            var mm = shp.ur;
+            Console.WriteLine((int)mm);
+            var bbb = "ur";
+            var sss=(shp)Enum.Parse(typeof(shp), bbb);
+            Console.WriteLine(sss);
+        }
+    }
+}
