@@ -13,28 +13,26 @@ namespace ConsoleApp2
     {
         static void Main(string[] args)
         {
-            //var firstName = "najeeb";
-            //foreach(var character in firstName)
-            //{
-            //    Console.WriteLine(character);
-            //}
-            var jaggedArray =new int[3][];
-            jaggedArray[0] = new int[4];
-            jaggedArray[1] = new int[5];
-            jaggedArray[2]=new int[3];
-            var myList = new List<int>() { 1, 2, 3, 2, 3 };
-            var myDate = new DateTime(2020, 3, 4);
-            var now = DateTime.Today;
-            Console.WriteLine(now);
-            var tomorrow = now.AddDays(33);
-            Console.WriteLine(now.ToLongDateString());
-            var start = DateTime.Now;
-            var end = DateTime.Now.AddMinutes(23);
-            var tomespan = end - start;
-            Console.WriteLine(tomespan);
+            var name = "najeeb ahmed";
+            Console.WriteLine("trim: '{0}'",name.Trim());
+            Console.WriteLine("trim: '{0}'", name.Trim().ToUpper());
+            var index = name.IndexOf(' ');
+            var firstName = name.Substring(0, index);
+            var lastName = name.Substring(index + 1);
+            Console.WriteLine(firstName);
+            Console.WriteLine(lastName);
+            var split=name.Split(' ');
+            Console.WriteLine(split[0]);
+            var d=name.Replace('n', 'N');
+            Console.WriteLine(d);
+            if(string.IsNullOrWhiteSpace(" "))
+            {
+                Console.WriteLine(" it is empty");
+            }
+            var price = 223.233f;
+            Console.WriteLine( price.ToString("C"));
 
-
-        }
+        } 
     }
 }
 
