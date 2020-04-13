@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.Design;
 using System.Diagnostics;
+using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Channels;
 
@@ -13,25 +14,29 @@ namespace ConsoleApp2
     {
         static void Main(string[] args)
         {
-            var name = "najeeb ahmed";
-            Console.WriteLine("trim: '{0}'",name.Trim());
-            Console.WriteLine("trim: '{0}'", name.Trim().ToUpper());
-            var index = name.IndexOf(' ');
-            var firstName = name.Substring(0, index);
-            var lastName = name.Substring(index + 1);
-            Console.WriteLine(firstName);
-            Console.WriteLine(lastName);
-            var split=name.Split(' ');
-            Console.WriteLine(split[0]);
-            var d=name.Replace('n', 'N');
-            Console.WriteLine(d);
-            if(string.IsNullOrWhiteSpace(" "))
+            var sentence = "thsi is bbcd sahbh skxb  chdb sxbckscb xbhsc bsxkb";
+            Console.WriteLine(sentence.Length);
+            if (sentence.Length < 20)
             {
-                Console.WriteLine(" it is empty");
+                Console.WriteLine(sentence);
             }
-            var price = 223.233f;
-            Console.WriteLine( price.ToString("C"));
-
+            else
+            {
+                var words = sentence.Split(' ');
+                var numberChar = 0;
+                var summ = new List<string>();
+                foreach (var word in words)
+                {
+                    summ.Add(word);
+                    numberChar += word.Length + 1;
+                    if (numberChar > 20)
+                    {
+                        break;
+                    }
+                    var ptani=String.Join(" ",summ);
+                    Console.Write(ptani);
+                }
+            }
         } 
     }
 }
