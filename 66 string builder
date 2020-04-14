@@ -1,0 +1,5 @@
+def in systemtxt
+a mutable string 
+easy to create and manipulate strings
+do not provide you index of ,last index of contatins, starts with
+it provide useful metods like append,insert ,replace  and clear
