@@ -1,5 +1,6 @@
 ﻿using ConsoleApp2.Maths;
 using System;
+using System.Text;
 using System.Collections.Generic;
 using System.ComponentModel.Design;
 using System.Diagnostics;
@@ -14,29 +15,20 @@ namespace ConsoleApp2
     {
         static void Main(string[] args)
         {
-            var sentence = "thsi is bbcd sahbh skxb  chdb sxbckscb xbhsc bsxkb";
-            Console.WriteLine(sentence.Length);
-            if (sentence.Length < 20)
-            {
-                Console.WriteLine(sentence);
-            }
-            else
-            {
-                var words = sentence.Split(' ');
-                var numberChar = 0;
-                var summ = new List<string>();
-                foreach (var word in words)
-                {
-                    summ.Add(word);
-                    numberChar += word.Length + 1;
-                    if (numberChar > 20)
-                    {
-                        break;
-                    }
-                    var ptani=String.Join(" ",summ);
-                    Console.Write(ptani);
-                }
-            }
+            var stringBuilder = new StringBuilder();
+            stringBuilder.Append('n', 10);
+            
+            stringBuilder.Append("header");
+            Console.WriteLine(stringBuilder);
+            stringBuilder.AppendLine();
+            stringBuilder.Replace('n', '+');
+            Console.WriteLine(stringBuilder);
+            stringBuilder.Remove(0, 8);
+            Console.WriteLine(stringBuilder);
+            //in string builder we are not getting string searching methods
+            //we can chain all these methods as they retuirn string builder
+
+
         } 
     }
 }
