@@ -7,6 +7,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Channels;
+using System.IO;
 
 namespace ConsoleApp2
 {
@@ -15,18 +16,17 @@ namespace ConsoleApp2
     {
         static void Main(string[] args)
         {
-            var stringBuilder = new StringBuilder();
-            stringBuilder.Append('n', 10);
-            
-            stringBuilder.Append("header");
-            Console.WriteLine(stringBuilder);
-            stringBuilder.AppendLine();
-            stringBuilder.Replace('n', '+');
-            Console.WriteLine(stringBuilder);
-            stringBuilder.Remove(0, 8);
-            Console.WriteLine(stringBuilder);
-            //in string builder we are not getting string searching methods
-            //we can chain all these methods as they retuirn string builder
+            Directory.CreateDirectory(@"D:\olx poster");
+            var currentfFiles=Directory.GetFiles(@"D:\internship", "*.cs",SearchOption.AllDirectories);
+            foreach(var file in currentfFiles)
+            {
+                Console.WriteLine(file);
+            }
+            //same for directory Directory.getdirectory....
+            Directory.Exists("......");
+            var directoryinfo = new DirectoryInfo("...");
+            directoryinfo.GetFiles();
+            directoryinfo.GetDirectories();
 
 
         } 
