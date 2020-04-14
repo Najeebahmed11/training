@@ -16,19 +16,9 @@ namespace ConsoleApp2
     {
         static void Main(string[] args)
         {
-            Directory.CreateDirectory(@"D:\olx poster");
-            var currentfFiles=Directory.GetFiles(@"D:\internship", "*.cs",SearchOption.AllDirectories);
-            foreach(var file in currentfFiles)
-            {
-                Console.WriteLine(file);
-            }
-            //same for directory Directory.getdirectory....
-            Directory.Exists("......");
-            var directoryinfo = new DirectoryInfo("...");
-            directoryinfo.GetFiles();
-            directoryinfo.GetDirectories();
+            var path = @"C:\Users\Najeeb Tiwana\source\repos\ConsoleApp2\ConsoleApp2\Program.cs";
 
-
+            Console.WriteLine(Path.GetExtension(path));
         } 
     }
 }
